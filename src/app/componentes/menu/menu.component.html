@@ -1,17 +1,42 @@
-<header>
-    <nav class="flex flex-col items-center space-y-4 mt-6">
-        <div class="flex space-x-20 items-center">
-            <a href="#sobre" class="text-white text-lg hover:text-gray-300 fira-sans-medium">SOBRE</a>
-            <a href="#tecnologias" class="text-white text-lg font-medium hover:text-gray-300 fira-sans-medium">TECNOLOGIAS</a>
-            <a href="#projetos" class="text-white text-lg font-medium hover:text-gray-300 fira-sans-medium">PROJETOS</a>
-            <a href="#contato" class="text-white text-lg font-medium hover:text-gray-300 fira-sans-medium">CONTATO</a>
+<header class="text-white">
+    <nav class="flex items-center justify-between px-6 h-16">
+
+        <div class="flex-1"></div>
+        
+        <button
+            class="md:hidden flex items-center text-white"
+            (click)="toggleMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+
+        <div class="hidden md:flex flex-1 justify-center space-x-20">
+            <a href="#sobre" class="text-lg hover:text-gray-500 fira-sans-medium transition-transform transform hover:scale-110">Sobre</a>
+            <a href="#tecnologias" class="text-lg hover:text-gray-500 fira-sans-medium transition-transform transform hover:scale-110">Tecnologias</a>
+            <a href="#projetos" class="text-lg hover:text-gray-500 fira-sans-medium transition-transform transform hover:scale-110">Projetos</a>
+            <a href="#contato" class="text-lg hover:text-gray-500 fira-sans-medium transition-transform transform hover:scale-110">Contato</a>
+        </div>
+        
+        <div class="hidden md:flex flex-1 justify-end">
             <button
                 id="language-btn"
-                class="w-10 h-10 bg-cover bg-center rounded-full border-2 border-purple hover:border-blue-400"
-                style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg');"
-                onclick="">
-                PT
+                class="w-10 h-10 bg-cover bg-center rounded-full border-2 border-purple-700 hover:border-white transition-transform transform hover:scale-110"
+                style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg');">
             </button>
-        </div>     
+        </div>
     </nav>
+    
+    <!-- Resolver menu que nao aparece -->
+    <div *ngIf="isMenuOpen" class="flex flex-col space-y-4 bg-gray-700 px-6 py-4 md:hidden">
+        <a href="#sobre" class="text-lg hover:text-gray-400">Sobre</a>
+        <a href="#tecnologias" class="text-lg hover:text-gray-400">Tecnologias</a>
+        <a href="#projetos" class="text-lg hover:text-gray-400">Projetos</a>
+        <a href="#contato" class="text-lg hover:text-gray-400">Contato</a>
+        <button
+            class="w-10 h-10 bg-cover bg-center rounded-full border-2 border-purple-700 hover:border-white transition-transform transform hover:scale-110"
+            style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg');">
+            PT
+        </button>
+    </div>
 </header>
