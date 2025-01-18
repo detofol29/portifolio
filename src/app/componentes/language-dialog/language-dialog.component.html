@@ -1,0 +1,7 @@
+<h2 class="text-center mb-4">Selecione o Idioma</h2>
+<ul class="space-y-2">
+  <li *ngFor="let language of languages" class="hover:bg-white p-2 rounded cursor-pointer" 
+      (click)="selectLanguage(language)">
+    {{ language }}
+  </li>
+</ul>
