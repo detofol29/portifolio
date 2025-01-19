@@ -7,13 +7,14 @@ import { LanguageDialogComponent } from '../language-dialog/language-dialog.comp
   selector: 'app-menu',
   imports: [CommonModule],
   templateUrl: './menu.component.html',
-  styleUrl: './menu.component.css'
+  styleUrls: ['./menu.component.css'] // Corrigido o nome de styleUrl para styleUrls
 })
 export class MenuComponent {
 
   constructor(private dialog: MatDialog) {}
-  
+
   isMenuOpen = false; // Variável para controlar o estado do menu
+  selectedLanguage: string | undefined; // Para armazenar o idioma selecionado
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -21,9 +22,17 @@ export class MenuComponent {
   }
 
   openLanguageDialog() {
-    this.dialog.open(LanguageDialogComponent, {
+    const dialogRef = this.dialog.open(LanguageDialogComponent, {
       width: '300px',
       data: { currentLanguage: 'Português' } // Opcional: passe dados para o diálogo
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.selectedLanguage = result;
+        console.log(`Idioma selecionado: ${result}`);
+        // Aqui você pode armazenar o idioma selecionado ou realizar outras ações
+      }
     });
   }
 }
