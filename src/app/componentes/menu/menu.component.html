@@ -1,4 +1,4 @@
-<header class="text-white">
+<header class="text-white mt-3">
   <nav class="flex items-center justify-between px-6 h-16">
 
       <div class="flex-1"></div>
@@ -12,10 +12,10 @@
       </button>
 
       <div class="hidden md:flex flex-1 justify-center space-x-20">
-          <a href="#sobre" class="text-lg hover:text-gray-500 fira-sans-medium transition-transform transform hover:scale-110">Sobre</a>
-          <a href="#tecnologias" class="text-lg hover:text-gray-500 fira-sans-medium transition-transform transform hover:scale-110">Tecnologias</a>
-          <a href="#projetos" class="text-lg hover:text-gray-500 fira-sans-medium transition-transform transform hover:scale-110">Projetos</a>
-          <a href="#contato" class="text-lg hover:text-gray-500 fira-sans-medium transition-transform transform hover:scale-110">Contato</a>
+          <a href="#sobre" class="text-lg hover:text-purple-500 fira-sans-medium transition-transform transform hover:scale-110">Sobre</a>
+          <a href="#tecnologias" class="text-lg hover:text-purple-500 fira-sans-medium transition-transform transform hover:scale-110">Tecnologias</a>
+          <a href="#projetos" class="text-lg hover:text-purple-500 fira-sans-medium transition-transform transform hover:scale-110">Projetos</a>
+          <a href="#contato" class="text-lg hover:text-purple-500 fira-sans-medium transition-transform transform hover:scale-110">Contato</a>
       </div>
       
       <div class="hidden md:flex flex-1 justify-end">
@@ -30,15 +30,15 @@
   
   <div *ngIf="isMenuOpen" 
      class="absolute top-0 left-0 w-2/3 h-screen bg-black text-white px-6 py-4 flex flex-col space-y-4 shadow-lg md:hidden">
-  <a href="#sobre" class="text-lg hover:text-gray-400">Sobre</a>
-  <a href="#tecnologias" class="text-lg hover:text-gray-400">Tecnologias</a>
-  <a href="#projetos" class="text-lg hover:text-gray-400">Projetos</a>
-  <a href="#contato" class="text-lg hover:text-gray-400">Contato</a>
-  <button
-    id="language-btn"
-    class="w-10 h-10 bg-cover bg-center rounded-full border-2 border-purple-700 hover:border-white transition-transform transform hover:scale-110"
-    style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg');"
-    (click)="openLanguageDialog()">
-</button>
+    <a href="#sobre" class="text-lg hover:text-gray-400">Sobre</a>
+    <a href="#tecnologias" class="text-lg hover:text-gray-400">Tecnologias</a>
+    <a href="#projetos" class="text-lg hover:text-gray-400">Projetos</a>
+    <a href="#contato" class="text-lg hover:text-gray-400">Contato</a>
+    <button
+        id="language-btn"
+        class="w-10 h-10 bg-cover bg-center rounded-full border-2 border-purple-700 hover:border-white transition-transform transform hover:scale-110"
+        style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg');"
+        (click)="openLanguageDialog()">
+    </button>
 </div>
 </header>
